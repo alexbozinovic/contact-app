@@ -1,0 +1,43 @@
+<div id="contact-wrapper">
+    <div class="form-wrapper">
+      <div id="error_msg" *ngIf="error_msg != 'none'">
+        * {{ error_msg }}
+      </div>
+
+      <div id="success_msg" *ngIf="success_msg != 'none'">
+        * {{ success_msg }}
+      </div>
+
+      <h2>Add a Contact</h2>
+          <div class="two-col">
+            <p><input id="fname" type="text" placeholder="First Name" [(ngModel)]="firstName"></p>
+            <p><input id="lname" type="text" placeholder="Last Name" [(ngModel)]="lastName"></p>
+          </div>
+          <div class="two-col">
+            <p><input id="company" type="text" placeholder="Company" [(ngModel)]="company"></p>
+            <p><input id="phone" type="text" placeholder="Phone Number" [(ngModel)]="phone"></p>
+          </div>
+          <div class="one-col">
+            <p><input id="email" type="text" placeholder="Email" [(ngModel)]="email"></p>
+          </div>
+          <div class="one-col">
+            <p><input id="address" type="text" placeholder="Address" [(ngModel)]="address"></p>
+          </div>
+          <div class="one-col">
+            <p><input type="button" value="Add Contact" (click)="addContact()"></p>
+          </div>
+    </div>
+    
+    <div class="list-wrapper">
+        <h2>Contact Cards</h2>
+        <ul *ngIf="contacts">
+            <li *ngFor="let contact of contacts">
+                <p class="name">{{ contact.firstName | titlecase }} {{ contact.lastName | titlecase }}</p>
+                <p class="company">{{ contact.company | titlecase }}</p>
+                <p class="phone">{{ contact.phone }}</p>
+                <p class="email"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+                <p class="address">{{ contact.address }}</p>
+            </li>
+        </ul>
+    </div>
+  </div>

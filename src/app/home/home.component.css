@@ -1,0 +1,117 @@
+#contact-wrapper{
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.form-wrapper, .list-wrapper{ width: 48%; }
+
+.form-wrapper{ width: 35%; }
+.list-wrapper{ width: 63%; }
+
+#contact-wrapper h2,
+#list-wrapper h2{
+    font-family: 'Alata', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.one-col, .two-col{ width: 80%; padding-bottom: 10px; }
+.two-col{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.one-col p{ width: 100%; }
+.two-col p{ width: 48%; }
+
+.two-col p input[type=text], .one-col p input[type=text]{
+    width: 94%;
+    padding: 5px 3%;
+    border: 1px solid #d2d2d2;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.one-col p input[type=button]{
+    border: 0;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #20732D;
+    font-family: 'Alata', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.one-col p input[type=button]:hover{
+    background-color: #22BF3A;
+}
+
+.one-col p input[type=button], .one-col p input[type=button]:hover{
+    -webkit-transition: .2s background-color ease-in-out;
+    -moz-transition: .2s background-color ease-in-out;
+    -ms-transition: .2s background-color ease-in-out;
+    -o-transition: .2s background-color ease-in-out;
+    transition: .2s background-color ease-in-out;
+}
+
+.one-col:last-child{
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+.list-wrapper ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.list-wrapper ul li{
+    width: 43%;
+    padding: 20px 3%;
+    margin: 0 1% 8px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    line-height: 1.5em;
+}
+
+.phone, .email{
+    padding-bottom: 10px;
+}
+.name, .company{
+    padding-bottom: 20px;
+}
+.name{ font-size: 1.1rem; font-weight: bold; text-shadow: 0px 1px 1px #fff; }
+
+.email a, .email a:visited{
+    text-decoration: none;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+    border-bottom: 2px solid #333;
+}
+
+.email a, .email a:visited,
+.email a:hover, .email a:active{
+    color: #333;
+}
+
+.email a:hover, .email a:active{
+    border-bottom: 2px solid #BF0F39;
+}
+
+#error_msg, #success_msg{
+    width: 100%;
+    padding: 20px 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#error_msg{ color: red; }
+#success_msg{ color: green; }
